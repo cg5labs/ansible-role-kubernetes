@@ -4,3 +4,5 @@
     {{ kubernetes_join_command }}
     creates=/etc/kubernetes/kubelet.conf
   tags: ['skip_ansible_lint']
+  retries: 10
+  delay: 5

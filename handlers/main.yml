@@ -1,3 +1,8 @@
 ---
 - name: restart kubelet
   service: name=kubelet state=restarted
+
+#- name: register nodes
+#  include_tasks: node-setup.yml
+#  when: kubernetes_role == 'node'
+
